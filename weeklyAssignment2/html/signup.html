@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Sign Up | WA2 | Crownstack</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/signup.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="signup-form">
+                <form>
+                    <img src="../img/signup-logo.png"><br>
+                    <label for="name">Name:</label><br>
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Please Enter Your Name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="Please Enter Your Email" required><br>
+                    <label for="phone">Phone:</label><br>
+                    <input class="form-input" type="tel" id="phone" name="phone" pattern="[1-9]{1}[0-9]{9}" maxlength="10" placeholder="Please Enter Your Number" required><br>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input class="form-input" type="date" id="dob" name="dob" required><br>
+                    <label for="password">Password:</label><br>
+                    <input class="form-input" type="password" id="password" name="password" placeholder="Please Enter Your Password" required><br>
+                    <label for="password2">Confirm Password:</label><br>
+                    <input class="form-input" type="password" id="password2" name="password2" placeholder="Please Confirm Your Password" required><br>
+                    <label for="gender">Gender:</label><br>
+                    <input class="form-input" id="gender" list="genderlist" name="gender"><br>
+                    <input class="custom-button"  onclick="onSubmit()" value="Sign Up">  
+                </form>
+                <datalist id="genderlist">
+                    <option value="Male">
+                    <option value="Female">
+                    <option value="Other">
+                </datalist>
+                <p>Already have an account? <a href="login.html">Sign in.</a></p>
+            </div>
+        </div>
+        <script>
+            let password = document.getElementById("password")
+            , password2 = document.getElementById("password2");
+
+            function validatePassword(){
+                if(password.value != password2.value) {
+                    password2.setCustomValidity("Passwords Don't Match");
+                } else {
+                    password2.setCustomValidity("");
+                }
+            }
+
+            password.onchange = validatePassword;
+            password2.onkeyup = validatePassword;
+
+            function onSubmit() {
+                let formData = {
+                    name: document.getElementById("name").value,
+                    password: document.getElementById("password").value,
+                    email: document.getElementById("email").value,
+                    phone: document.getElementById("phone").value,
+                    dob: document.getElementById("dob").value,
+                    gender: document.getElementById("gender").value,
+                }
+                if( formData.name && formData.password && formData.email && formData.phone && formData.dob && formData.gender){
+                    if(password.value === password2.value){
+                        formData = {...formData, signup: true   }
+                        localStorage.setItem('formData', JSON.stringify(formData));
+                    } else {
+                        alert("Please check password & confirm password")
+                    }
+                } else {
+                    alert("Please check the details");
+                }
+            }
+
+            function redirectIfSignedup(){
+                let {signup} = JSON.parse(localStorage.getItem("formData"));
+                if(signup == true){
+                    window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/login.html");
+                }
+            }
+            redirectIfSignedup()
+        </script>
+    </body>
+</html>

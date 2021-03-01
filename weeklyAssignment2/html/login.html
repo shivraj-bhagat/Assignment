@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Login | WA2 | Crownstack</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="login-form">
+                <form>
+                    <img src="../img/signup-logo.png"><br>
+                    <label for="email">Email:</label><br>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="Please Enter Your Email" required><br>
+                    <label for="password">Password:</label><br>
+                    <input class="form-input" type="password" id="password" name="password" placeholder="Please Enter Your Password" required><br><br>
+                    <input class="custom-button" onclick="onLogin()" value="Login">  
+                </form>
+                <p>New to this site, <a href="signup.html" onclick="deleteLocalstorage()">sign up here</a>?</p>
+            </div>
+        </div>
+        <script>
+            function deleteLocalstorage(){
+                let formData = JSON.parse(localStorage.getItem("formData"));
+                formData = { ...formData, signup: false};
+                localStorage.setItem('formData', JSON.stringify(formData));
+                window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/signup.html");
+            }
+
+            function onLogin(){
+                let formData = JSON.parse(localStorage.getItem("formData"));
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+                console.log(email,password)
+                if(email === formData.email && password === formData.password){
+                    formData = { ...formData, login: true};
+                    localStorage.setItem('formData', JSON.stringify(formData));
+                    window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/index.html");
+                }else {
+                    alert("Please check email and password");
+                }
+            }
+        </script>
+    </body>
+</html>

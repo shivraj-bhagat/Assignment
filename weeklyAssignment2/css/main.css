@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/img-bg.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+.main {
+    margin: 10% 30% 10% 30%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 7px 7px;
+    background: rgba(220, 221, 225,0.8);
+    border: 1px solid #7f8fa6;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #2f3640;
+    margin-bottom: 10px;
+}
+
+.custom-button {
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    background: #efefef;
+    color: #323a41;
+    border-color: #6c757d;
+    border: 1px solid transparent;
+    padding: 5px 2px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin-left: 175px;
+    width: 100px;
+}
+
+.custom-button:hover {
+    border-color: #0097e6;
+}

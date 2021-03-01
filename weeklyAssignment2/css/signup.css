@@ -1,0 +1,22 @@
+.signup-form {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background: rgba(255, 255, 255,0.4);
+    padding: 30px 50px 30px 30px;
+}
+
+.signup-form img {
+    height: 80px;
+    width: 80px;
+    margin-left: 170px;
+}
+
+.signup-form label {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.signup-form a {
+    text-decoration: none;
+}
