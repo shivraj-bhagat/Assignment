@@ -62,8 +62,10 @@
                 }
                 if( formData.name && formData.password && formData.email && formData.phone && formData.dob && formData.gender){
                     if(password.value === password2.value){
-                        formData = {...formData, signup: true   }
                         localStorage.setItem('formData', JSON.stringify(formData));
+                        alert("Signed up Successfully!!!");
+                        setTimeout('', 5000);
+                        window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/index.html");
                     } else {
                         alert("Please check password & confirm password")
                     }
@@ -71,14 +73,6 @@
                     alert("Please check the details");
                 }
             }
-
-            function redirectIfSignedup(){
-                let {signup} = JSON.parse(localStorage.getItem("formData"));
-                if(signup == true){
-                    window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/login.html");
-                }
-            }
-            redirectIfSignedup()
         </script>
     </body>
 </html>
