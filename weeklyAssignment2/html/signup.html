@@ -73,6 +73,14 @@
                     alert("Please check the details");
                 }
             }
+
+            function redirectIfLogin(){
+                let {login} = JSON.parse(localStorage.getItem("formData"));
+                if(login == true){
+                    window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/index.html");
+                }
+            }
+            redirectIfLogin()
         </script>
     </body>
 </html>
