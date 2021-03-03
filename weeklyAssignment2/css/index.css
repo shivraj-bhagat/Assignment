@@ -30,24 +30,23 @@
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    bottom: 0;
     color: #FFFFFF;
     text-align: center;
 }
 
 .container {
-    margin: 10px 50px;
+    padding: 10px 50px;
+    display: inline-grid;
+    grid-template-columns: 25% auto;
 }
 
 .sidebar, .content {
-    height: 550px;
+    height: auto;
 }
 
 .sidebar {
-    float: left;
-    width: 25%;
     background: rgba(39, 60, 117,1.0);
     color: #FFFFFF;
     margin: 0px 10px;
@@ -72,9 +71,6 @@
 
 .content {
     background: rgba(220, 221, 225,1.0);
-    float: left;
-    min-width: 70%;
-    max-width: 75%;
     padding: 10px;
     margin: 0px 10px;
 }

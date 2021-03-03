@@ -15,9 +15,6 @@
                     <a href="#">Crownstack Weekly Assignment 2</a>
                 </div>
                 <div class="nav-left">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
                     <a href="../html/login.html">
                         <span id="name"></span>
                         <img class="user-logo" src="../img/user.png" alt="user logo">
@@ -40,8 +37,8 @@
                     <h1>Welcome to the Weekly Assignment 2</h1>
                     <p class="paragraph">
                         Hello! User, Welcome to the assignment task for week 2 given by vinay kumar, a senior
-                        lead developer given to shiv raj<br> bhagat a software developer trainee of the crownstack.
-                        This tasks include the login and sign up page also a home page all <br> this feature of data
+                        lead developer given to shiv raj bhagat a software developer trainee of the crownstack.
+                        This tasks include the login and sign up page also a home page all this feature of data
                         storing is acheived with the help of localstorage of browser
                     </p>
                     <ul>
@@ -49,21 +46,21 @@
                         <li>After login it redirects you to index page</li>
                         <li>After login you, see the change in login where now name is displayed.</li>
                         <li>Sidebar has logout if login is true else there's no logout function</li>
-                        <li>5 secs alert message is added for Successfully login and signup</li>
+                        <li>Alert message is added for Successfully login and signup</li>
                         <li>You cannot got to login and signup, if you're logged in</li>
                     </ul>
                     <h4>Structure of localStorage</h5>
-                        <p>
-                            formData: {<br>
-                                &nbsp;&nbsp;name:<br>
-                                &nbsp;&nbsp;password:<br>
-                                &nbsp;&nbsp;email:<br>
-                                &nbsp;&nbsp;dob:<br>
-                                &nbsp;&nbsp;gender:<br>
-                                &nbsp;&nbsp;phone:<br>
-                                &nbsp;&nbsp;login:<br>
-                            }
-                        </p>
+                    <pre>
+                        formData: {
+                            name:
+                            password:
+                            email:
+                            dob:
+                            gender:
+                            phone:
+                            login:
+                        }
+                    </pre>
                 </div>
             </div>
             <!--main-content ends-->
@@ -75,10 +72,18 @@
             <!--footer ends-->
         </div>
         <script>
-            let {name,login} = JSON.parse(localStorage.getItem("formData"));
-            if(login) {
-                document.getElementById("name").innerHTML = name;
-            } else {
+            let formData = localStorage.getItem("formData");
+            let name,login;
+            if(formData != null || formData != undefined){ 
+                formData = JSON.parse(formData); 
+                name = formData.name;
+                login = formData.login              
+                if(login) {
+                    document.getElementById("name").innerHTML = name;
+                }
+            } 
+            
+            if( !name || !login ) {
                 document.getElementById("name").innerHTML = "Login";
                 let logout = document.getElementById("logout");
                 logout.remove();
@@ -88,7 +93,7 @@
                 let formData = JSON.parse(localStorage.getItem("formData"));
                 formData = { ...formData, login: false};
                 localStorage.setItem('formData', JSON.stringify(formData));
-                window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/index.html");
+                location.reload();
             }
         </script>
     </body>
