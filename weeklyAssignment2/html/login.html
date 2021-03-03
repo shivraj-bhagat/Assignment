@@ -15,12 +15,13 @@
                     <label for="email">Email:</label><br>
                     <input class="form-input" type="email" id="email" name="email" placeholder="Please Enter Your Email" required><br>
                     <label for="password">Password:</label><br>
-                    <input class="form-input" type="password" id="password" name="password" placeholder="Please Enter Your Password" required><br><br>
-                    <input class="custom-button" onclick="onLogin()" value="Login">  
+                    <input class="form-input" type="password" id="password" minlength="8" name="password" placeholder="Please Enter Your Password" required><br><br>
+                    <input class="custom-button" type="submit" onclick="onLogin()" value="Login">  
                 </form>
                 <p>New to this site, <a href="signup.html">sign up here</a>?</p>
             </div>
         </div>
+        <script src="/js/login.js"></script>
         <script>
             // function deleteLocalstorage(){
             //     let formData = JSON.parse(localStorage.getItem("formData"));
@@ -28,29 +29,9 @@
             //     localStorage.setItem('formData', JSON.stringify(formData));
             //     window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/signup.html");
             // }
-
-            function onLogin(){
-                let formData = JSON.parse(localStorage.getItem("formData"));
-                let email = document.getElementById("email").value;
-                let password = document.getElementById("password").value;
-                console.log(email,password)
-                if(email === formData.email && password === formData.password){
-                    formData = { ...formData, login: true};
-                    localStorage.setItem('formData', JSON.stringify(formData));
-                    alert("You're logged in!!!!");
-                    setTimeout('', 5000);
-                    window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/index.html");
-                }else {
-                    alert("Please check email and password");
-                }
+            if(formData){
+                redirectIfLogin()
             }
-            function redirectIfLogin(){
-                let {login} = JSON.parse(localStorage.getItem("formData"));
-                if(login == true){
-                    window.location.replace("file:///home/shivraz/crownstack/work/weeklyAssignment2/html/index.html");
-                }
-            }
-            redirectIfLogin()
         </script>
     </body>
 </html>
