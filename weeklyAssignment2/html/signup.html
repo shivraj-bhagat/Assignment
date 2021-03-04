@@ -39,9 +39,10 @@
         </div>
         <script src="../js/signup.js"></script>
         <script>
-            let formData = localStorage.getItem("formData");
-            if(formData){
-                redirectIfLogin(formData);
+            let login = localStorage.getItem("login") === "true" ? true : false;
+            // console.log(login, typeof login)
+            if(login){
+                redirectIfLogin();
             }
         </script>
     </body>

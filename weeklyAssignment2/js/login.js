@@ -20,7 +20,12 @@ password.addEventListener("keyup", function (event) {
     }
 });
 
-let formData = localStorage.getItem("formData");
+const user = (() => {
+    const fieldValue = localStorage.getItem('users');
+    return fieldValue === null
+      ? []
+      : JSON.parse(fieldValue);
+})();
 
 function onLogin(){
     if(!(email.value.length)){
@@ -31,21 +36,26 @@ function onLogin(){
     } else if(!(password.value.length)) {
         password.setCustomValidity("Please provide password!");
         form.reportValidity();
-    } else if(formData){
-        formData = JSON.parse(formData);
+    } else if(user.length){
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
-        if(email !== formData.email){
+        let flagUser = false, pointer = null;
+        for(let i=0; i<user.length; i++){
+            if(user[i].email === email){
+                flagUser = true;
+                pointer = i;
+                break;
+            }
+        }
+        if(!flagUser){
             event.preventDefault();
             alert("Email doesn't exists, Please sign up!");
-        }else if(password !== formData.password) {
+        }else if(password !== user[pointer].password) {
             event.preventDefault();
             alert("Please check your password!!!");
-        }
-        if(email === formData.email && password === formData.password){
-            // console.log("here")
-            formData = { ...formData, login: true};
-            localStorage.setItem('formData', JSON.stringify(formData));
+        } else {
+            localStorage.setItem('login', true);
+            localStorage.setItem("pointer", pointer)
             alert("You're logged in!!!!");
             window.location.replace("index.html");
         }
@@ -54,9 +64,8 @@ function onLogin(){
         event.preventDefault();
     }
 }
+
+let login = localStorage.getItem("login") === "true" ? true : false;
 function redirectIfLogin(){
-    let {login} = JSON.parse(localStorage.getItem("formData"));
-    if(login == true){
-        window.location.replace("index.html");
-    }
+    window.location.replace("index.html");
 }
