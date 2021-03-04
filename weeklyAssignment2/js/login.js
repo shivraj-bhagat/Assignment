@@ -21,6 +21,7 @@ password.addEventListener("keyup", function (event) {
 });
 
 let formData = localStorage.getItem("formData");
+
 function onLogin(){
     if(!(email.value.length)){
         // console.log(email.value.length)
@@ -46,7 +47,7 @@ function onLogin(){
             formData = { ...formData, login: true};
             localStorage.setItem('formData', JSON.stringify(formData));
             alert("You're logged in!!!!");
-            window.location.replace("/html/index.html");
+            window.location.replace("index.html");
         }
     } else {
         alert("Email doesn't exists, please sign up!");
@@ -56,6 +57,6 @@ function onLogin(){
 function redirectIfLogin(){
     let {login} = JSON.parse(localStorage.getItem("formData"));
     if(login == true){
-        window.location.replace("/html/index.html");
+        window.location.replace("index.html");
     }
 }

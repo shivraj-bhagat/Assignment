@@ -25,19 +25,19 @@
                     <label for="password2">Confirm Password:</label><br>
                     <input class="form-input" type="password" id="password2" name="password2" placeholder="Please Confirm Your Password" required><br>
                     <label for="gender">Gender:</label><br>
-                    <input class="form-input" id="gender" list="genderlist" name="gender"><br>
+                    <select id="gender" name="gender" required>
+                        <option value="" selected disabled>Choose a gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
                     <span id="error"></span>
                     <input class="custom-button" type="submit" onclick="onSubmit()" value="Sign Up">  
                 </form>
-                <datalist id="genderlist">
-                    <option value="Male">
-                    <option value="Female">
-                    <option value="Other">
-                </datalist>
                 <p>Already have an account? <a href="login.html">Sign in.</a></p>
             </div>
         </div>
-        <script src="/js/signup.js"></script>
+        <script src="../js/signup.js"></script>
         <script>
             let formData = localStorage.getItem("formData");
             if(formData){
