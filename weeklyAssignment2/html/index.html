@@ -72,27 +72,32 @@
             <!--footer ends-->
         </div>
         <script>
-            let formData = localStorage.getItem("formData");
-            let name,login;
-            if(formData != null || formData != undefined){ 
-                formData = JSON.parse(formData); 
-                name = formData.name;
-                login = formData.login              
+            const user = (() => {
+                const fieldValue = localStorage.getItem('users');
+                return fieldValue === null
+                ? []
+                : JSON.parse(fieldValue);
+            })();
+
+            let name;
+            let login = localStorage.getItem("login") === "true" ? true : false;
+            let pointer = localStorage.getItem("pointer");
+
+            if(user.length && pointer){ 
+                name = user[pointer].name;         
                 if(login) {
                     document.getElementById("name").innerHTML = name;
                 }
             } 
-            
-            if( !name || !login ) {
+
+            if( !name || !(login) ) {
                 document.getElementById("name").innerHTML = "Login";
                 let logout = document.getElementById("logout");
                 logout.remove();
             }
             
             function onLogout() {
-                let formData = JSON.parse(localStorage.getItem("formData"));
-                formData = { ...formData, login: false};
-                localStorage.setItem('formData', JSON.stringify(formData));
+                localStorage.setItem('login', false);
                 location.reload();
             }
         </script>

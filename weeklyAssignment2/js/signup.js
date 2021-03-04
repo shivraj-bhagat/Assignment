@@ -63,6 +63,13 @@ function validateForm() {
         return true;
     }
 }
+
+const user = (() => {
+    const fieldValue = localStorage.getItem('users');
+    return fieldValue === null
+      ? []
+      : JSON.parse(fieldValue);
+})();
     
 function onSubmit(){
     let formData = {
@@ -75,18 +82,27 @@ function onSubmit(){
     };
     if( formData.name && formData.password && formData.email && formData.phone && formData.dob && formData.gender){
         event.preventDefault();
-        localStorage.setItem('formData', JSON.stringify(formData));
-        alert("Signed up Successfully!!!");
-        window.location.replace("index.html");
+        let flagUser = false;
+        for(let i=0; i<user.length; i++){
+            if(user[i].email == formData.email) {
+                flagUser = true;
+                break;
+            }
+        }
+        if(!flagUser){
+            user.push(formData);
+            localStorage.setItem('users',JSON.stringify(user));
+            alert("Signed up Successfully!!!");
+            window.location.replace("index.html");
+        } else {
+            alert("Email already exists!!!");
+        }
     } else {
         // event.preventDefault();
         form.reportValidity();
     }
 }
 
-function redirectIfLogin(formData){
-    let {login} = JSON.parse(formData);
-    if(login == true){
-        window.location.replace("index.html");
-    }
+function redirectIfLogin(){
+    window.location.replace("index.html");
 }
