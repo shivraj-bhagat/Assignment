@@ -48,7 +48,6 @@ phone.addEventListener("keyup", function (event) {
 
 function validateForm() {
     let text;
-    console.log("yeyeye")
     if(!(email.value.length)) {text = "email"}
     else if(!(password.value.length)) {text = "password"}
     else if(!(password2.value)){text = "confirm password"}
@@ -66,7 +65,6 @@ function validateForm() {
 }
     
 function onSubmit(){
-    console.log(document.getElementById("gender").value.length)
     let formData = {
         name: document.getElementById("name").value,
         password: document.getElementById("password").value,
@@ -79,7 +77,7 @@ function onSubmit(){
         event.preventDefault();
         localStorage.setItem('formData', JSON.stringify(formData));
         alert("Signed up Successfully!!!");
-        window.location.replace("/html/index.html");
+        window.location.replace("index.html");
     } else {
         // event.preventDefault();
         form.reportValidity();
@@ -89,6 +87,6 @@ function onSubmit(){
 function redirectIfLogin(formData){
     let {login} = JSON.parse(formData);
     if(login == true){
-        window.location.replace("/html/index.html");
+        window.location.replace("index.html");
     }
 }
