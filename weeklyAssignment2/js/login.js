@@ -55,7 +55,7 @@ function onLogin(){
             alert("Please check your password!!!");
         } else {
             localStorage.setItem('login', true);
-            localStorage.setItem("pointer", pointer)
+            localStorage.setItem("pointer", pointer);
             alert("You're logged in!!!!");
             window.location.replace("index.html");
         }

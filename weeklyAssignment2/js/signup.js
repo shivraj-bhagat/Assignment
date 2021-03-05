@@ -91,6 +91,8 @@ function onSubmit(){
         }
         if(!flagUser){
             user.push(formData);
+            localStorage.setItem('login', true);
+            localStorage.setItem("pointer", user.length-1);
             localStorage.setItem('users',JSON.stringify(user));
             alert("Signed up Successfully!!!");
             window.location.replace("index.html");
