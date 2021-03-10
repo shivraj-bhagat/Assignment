@@ -17,7 +17,7 @@
         <div class="header">
             <div class="header-wrapper">
                 <a href="./index.html">
-                    <img class="logo" src="../img/logo.png">
+                    <img class="logo" src="../img/logo.png" id="headerLogo">
                 </a>
                 <div class="left-content">
                     <ul class="left-content-wrapper">
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div class="header-fixed">
+        <!-- <div class="header-fixed">
             <div class="header-wrapper">
                 <a href="./index.html">
                     <img class="logo" src="../img/logo_fixed.png">
@@ -106,7 +106,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--navbar ends-->
 
         <!--heading contact starts-->
@@ -173,12 +173,14 @@
         <!--footer ends-->
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" async></script> -->
         <script>
-            const navbar = document.querySelector('.header-fixed');
+            const navbar = document.querySelector('.header');
             window.onscroll = () => {
                 if (window.scrollY > 100) {
                     navbar.classList.add('nav-active');
+                    document.getElementById("headerLogo").setAttribute("src","../img/logo_fixed.png");
                 } else {
                     navbar.classList.remove('nav-active');
+                    document.getElementById("headerLogo").setAttribute("src","../img/logo.png");
                 }
             };
 
