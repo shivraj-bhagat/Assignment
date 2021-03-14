@@ -94,19 +94,9 @@ function setText(x){
     document.getElementById("heading").innerHTML = head;
     document.getElementById("paragraph").innerHTML = para;
     document.getElementById("boxLogo").setAttribute("src",logo);
-    document.getElementById("boxImg").setAttribute("src",bg);
+    document.getElementsByClassName("solution-section")[0].style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("${bg}")`;
 }
 
-const navbar = document.querySelector('.header');
-window.onscroll = () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('nav-active');
-        document.getElementById("headerLogo").setAttribute("src","../img/logo_fixed.png");
-    } else {
-        navbar.classList.remove('nav-active');
-        document.getElementById("headerLogo").setAttribute("src","../img/logo.png");
-    }
-};
 let slideIndex = 0;
 showSlides();
 function showSlides() {
@@ -122,6 +112,7 @@ function showSlides() {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+    
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 2000);

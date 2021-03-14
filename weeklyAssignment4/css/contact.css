@@ -1,0 +1,115 @@
+.content {
+    width: 85%;
+    max-width: 780px;
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-column-gap: 50px;
+}
+
+.left {
+    height: 450px;
+}
+
+.left img {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    height: 60px;
+}
+
+.right {
+    height: 100%;
+    padding: 120px 40px;
+}
+
+.right h2 {
+    margin: 0;
+    color: #102749;
+    font-weight: 700;
+    padding-bottom: 5px;
+    line-height: 1.25;
+    font-size: 1.2em;
+}
+
+.right h3 {
+    margin: 0;
+    color: #202A38;
+    padding-bottom: 10px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.right a {
+    text-decoration: none;
+}
+
+.svg-color {
+    filter: invert(30%) sepia(14%) saturate(2557%) hue-rotate(176deg) brightness(98%) contrast(92%);
+}
+
+.social-icon {
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.social-icon img {
+    height: 30px;
+    width: 30px;
+}
+
+.content-wrapper:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.map-section {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.contact .intro .wrapper h1 {
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .contact .intro .wrapper {
+        position: static;
+        padding: 10px 0;
+    }
+
+    .contact .intro .wrapper h1 {
+        font-size: 3.5em;
+        font-weight: 500;
+    }
+
+    .content-wrapper {
+        grid-template-columns: auto;
+    }
+
+    .left {
+        display: none;
+    } 
+
+    .right {
+        padding: 50px 40px;
+    }
+}
