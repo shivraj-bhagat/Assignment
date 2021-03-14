@@ -44,7 +44,6 @@
 .who-wrapper .readmore {
     color: #2b5591;
     border: 2px solid #2b5591;
-    margin-top: 40px;
 }
 
 .who-wrapper .readmore, .text-wrap .slider-readmore,
@@ -88,6 +87,21 @@
     margin-top: -950px; 
 }
 
+.video-section{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-section iframe{
+    left:0;
+    top:0;
+    height:80%;
+    width:80%;
+    transform: translateX(12%);
+    position:absolute;
+}
+
 /* slider css starts*/
 .slider-heading h1 {
     position: absolute;
@@ -104,13 +118,11 @@
 
 .slider-wrapper {
     display: none;
-    min-width: 1000px;
 }
 
 .slider-wrapper img {
     vertical-align: middle;
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     height: 600px;
 }
 
@@ -321,6 +333,11 @@ to {opacity: 1}
 /* Partner section ends */
 
 /* solution section starts */
+.solution-section .solution-heading {
+    position: relative;
+    z-index: 0;
+}
+
 .solution-section .solution-heading h1 {
     color: #fff;
     font-size: 3em;
@@ -337,6 +354,11 @@ to {opacity: 1}
     font-weight: 500;
     text-align: center;
     padding: 25px 25%;
+}
+
+.solution-section .solution-footer {
+    position: relative;
+    z-index: 0;
 }
 
 .solution-section .solution-footer p {
@@ -392,25 +414,14 @@ to {opacity: 1}
     color: #fff;
 }
 
-.solution-section > img {
-    width: 100%;
-    position: absolute;
-    height: 900px;
-    z-index: -10;
-}
-
-.solution-section .overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1;
-    left: 0;
-    height: 900px;
-    z-index: -5;
+.solution-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/box-bg/pic-banking.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .solution-section .box-wrapper {
+    position: relative;
+    z-index: 0;
     display: grid;
     grid-template-columns: 20% 55%;
     grid-column-gap: 5%;
@@ -481,3 +492,118 @@ to {opacity: 1}
 /* box section ends*/
 
 /* solution section ends*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .slider-heading h1 {
+        font-size: 2.5em;
+    }
+
+    .text-wrap h2 {
+        margin-top: 15px;
+        font-size: 2em;
+    }
+
+    .text-wrap p {
+        padding: 10px 100px;
+    }   
+}
+
+@media screen and (max-width: 767px) {
+    .solution-section .solution-heading p,
+    .solution-section .solution-footer p {
+        padding: 25px 15%;
+    }
+    
+    .solution-section .box-wrapper {
+        grid-template-columns: auto;
+        grid-column-gap: 0;
+        padding: 0 10% 0 10%;
+    }
+
+    .solution-section .box-wrapper ul {
+        width: 100%;
+        float: left;
+        text-align: center;
+    }
+
+    .solution-section .box-wrapper .list-box {
+        border-right: 0;
+        border-bottom: 2px solid #ffaf00;
+    }
+
+    .solution-section .box-wrapper .list-box li {
+        display: inline-block;
+        padding: 0 5px;
+    }
+
+    .solution-section .box-wrapper .box-details img {
+        position: relative;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .solution-section .box-wrapper .box-details h3, 
+    .solution-section .box-wrapper .box-details p {
+        text-align: center;
+    }
+
+    .solution-section .box-wrapper .box-details a {
+        position: relative;
+        left: 30%;
+        right: 0;
+    }
+
+    .solution-section .solution-footer .buttons {
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+    }
+
+    .partners .img-wrapper {
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+    }
+
+    .partners .img-wrapper img {
+        padding: 20px 0;
+        left: 0;
+    }
+
+    .slider-heading h1 {
+        font-size: 2.5em;
+    }
+
+    .text-wrap h2 {
+        margin-top: 15px;
+        font-size: 2em;
+    }
+
+    .text-wrap p {
+        padding: 10px 30px;
+    }
+
+    .press-wrapper {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .numbers {
+        grid-template-columns: auto;
+    }
+
+    .solution-section .box-wrapper .box-details a {
+        left: 25%;
+    }
+
+    .text-wrap p {
+        font-size: 1.25em;
+    }
+
+    .press-wrapper {
+        grid-template-columns: auto;
+        grid-row-gap: 10px;
+    }   
+}
