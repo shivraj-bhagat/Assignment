@@ -1,0 +1,43 @@
+.border-line {
+    height: 3px;
+}
+
+.nav-footer {
+    padding: 100px 0;
+    margin-bottom: 0;
+}
+
+.nav-footer h2 {
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+.nav-footer-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.nav-footer .nav-footer-links {
+    text-align: center;
+}
+
+.nav-footer-links img {
+    max-width: 70px;
+    max-height: 55px;
+    transition: all 0.3s ease-out;
+}
+
+.nav-footer-links a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 575px) {
+    .nav-footer-links {
+        display: block;
+    }
+}
