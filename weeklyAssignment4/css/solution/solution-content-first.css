@@ -1,0 +1,35 @@
+.solution-content-first .solution-wrapper h5 {
+    font-size: 1.8em;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.solution-content-first .solution-wrapper p {
+    color: #202A38;
+    line-height: 1.25;
+    padding: 10px 0;
+}
+
+.solution-content-first .solution-wrapper .first-p {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.solution-content-first .solution-wrapper .second-p {
+    font-size: 1.55em;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+    .solution-content-first .solution-wrapper h5,
+    .solution-content-first .solution-wrapper .first-p {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .solution-content-first .solution-wrapper .second-p {
+        font-size: 1.2em;
+    }
+}

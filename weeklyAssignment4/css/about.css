@@ -98,6 +98,160 @@
     background-attachment: fixed;
 }
 
+.leaders {
+    width: 85%;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.leaders h1 {
+    text-align: center;
+    color: #2B5591;
+    font-size: 4em;
+    font-weight: 300;
+    padding: 50px 0;
+}
+
+.leader-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.leaders .leader-wrapper .leader-section {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    vertical-align: top;
+    margin: 20px 0;
+}
+
+.leaders .leader-wrapper .leader-section {
+    width: 250px;
+}
+
+.leaders .leader-wrapper .leader-section .leader-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0  auto;
+}
+
+.leaders .leader-wrapper .leader-section h2 {
+    color: #4A4A4A;
+    font-size: 1.25em;
+    padding: 5px 0;
+}
+
+.leaders .leader-wrapper .leader-section h3 {
+    color: #2B5591;
+    font-size: 0.8em;
+    line-height: 1.25;
+    padding: 5px 0 10px 0;
+}
+
+.leaders .leader-wrapper .leader-section h4 {
+    font-size: 1em;
+    color: #686868;
+    line-height: 1.25;
+    padding: 0 15px;
+    font-weight: 300;
+}
+
+.social-impact h1 {
+    color: #2B5591;
+    font-size: 3.8em;
+    font-weight: 300;
+    padding: 30px 0;
+}
+
+.social-impact h2 {
+    color: #102749;
+    font-size: 1.9em;
+    font-weight: 300;
+    line-height: 1.25;
+    padding: 10px 0;
+}
+
+.social-impact i, .about-company-para p {
+    font-size: 1.35em;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.about-company-para p {
+    color: #202A38;
+}
+
+.about-goal img {
+    width: 60%;
+    height: auto;
+}
+
+.about-goal .about-wrapper a {
+    text-decoration: none;
+}
+
+.about-goal-para p {
+    font-size: 1.35em;
+    color: rgb( 47, 47, 47 );
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.yef-section h1 {
+    color: #2B5591;
+    font-size: 4em;
+    padding: 50px 0;
+    line-height: 1.25;
+    font-weight: 300;
+}
+
+.yef-section .about-wrapper {
+    margin-bottom: 0;
+}
+
+.yef-section-para {
+    padding-bottom: 100px;
+}
+
+.yef-section-para p {
+    margin: 30px 0;
+    font-size: 1.4em;
+    color: rgb( 47, 47, 47 );
+    line-height: 26px;
+}
+
+.yef-section-para button {
+    border-radius: 30px;
+    border: 2px solid #102749;
+    color: #2B5591;
+    text-align: center;
+    background: transparent;
+    font-variant: small-caps;
+    padding: 7px 15px;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.yef-section-para button:hover {
+    background: #102749;
+    color: #fff;
+}
+
 @media screen and (max-width: 767px) {
     .about .about-intro h1 {
         top: 40%;
@@ -111,6 +265,22 @@
 
     .about-content .about-section-top .about-section-top-heading {
         grid-template-columns: auto auto;
+    }
+
+    .leaders h1 {
+        padding: 25px 0;
+    }
+
+    .social-impact h1 {
+        font-size: 2em;
+    }
+
+    .social-impact h2 {
+        font-size: 1.5em;
+    }
+
+    .yef-section h1 {
+        font-size: 2em;
     }
 }
 
@@ -127,5 +297,19 @@
     .about-section-top p, .company .first-p, .company .last-p {
         font-size: 1.2em;
         font-weight: 400;
+    }
+
+    .about-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .leaders h1 {
+        font-size: 2.5em;
+        padding: 25px 0;
+    }
+
+    .about-goal img {
+        width: 100%;
     }
 }

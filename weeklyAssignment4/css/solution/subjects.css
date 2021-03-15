@@ -1,0 +1,176 @@
+.subjects {
+    color: #102749;
+    width: 886px;
+    max-width: 94%;
+    margin: 48px auto 60px;
+    background: white;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 12%), 0 5px 15px 0 rgb(0 0 0 / 12%);
+    border-radius: 12px;
+}
+
+.subjects .subjects-heading {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.subjects .subjects-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.subject, .subjects-heading {
+    border-bottom: solid 2px #F0F0F0;
+}
+
+.subject:nth-of-type(2n) {
+    border-left: solid 2px #F0F0F0;
+}
+
+.subject {
+    width: 40%;
+    padding: calc(5% - 1px);
+}
+
+.subject .title {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.subject .title h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.subject.blue .underline {
+    border-bottom: 3px solid #0097ff;
+}
+
+.subject h4 {
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.subject > h4 {
+    display: block;
+} 
+
+.subject ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 24px;
+    width: 45%;
+}
+
+.subject ul {
+    list-style: none;
+}
+
+.subject ul:not(:first-of-type) {
+    margin-left: 16px;
+}
+
+.subject ul li {
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 1em;
+}
+
+.subject ul li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 0.6em;
+    margin-bottom: 0.15em;
+    margin-left: -1em;
+}
+
+.subject:last-child:not(:nth-of-type(2n)) {
+    width: 100%;
+}
+
+.subject:last-child:not(:nth-of-type(2n)) ul {
+    width: 31%;
+}
+
+.subject.blue li::before {
+    background-color: #0097ff;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #0097ff 0%, #0016ff 100%);
+}
+
+.subject.orange .underline {
+    border-bottom: 3px solid #ff7500;
+}
+
+.subject.orange li::before {
+    background-color: #ff7500;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #ff7500 0%, #ffd100 100%);
+}
+
+.subject.green .underline {
+    border-bottom: 3px solid #0c6800;
+}
+
+.subject.green li::before {
+    background-color: #0c6800;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #0c6800 0%, #90ff00 100%);
+}
+
+.subject.ocean .underline {
+    border-bottom: 3px solid #033d65;
+}
+
+.subject.ocean li::before {
+    background-color: #033d65;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #033d65 0%, #00abe0 100%);
+}
+
+.subject.yellow .underline {
+    border-bottom: 3px solid #ffdf00;
+}
+
+.subject.yellow li::before {
+    background-color: #ffdf00;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #ffdf00 0%, #ffa400 100%);
+}
+
+.subject.red .underline {
+    border-bottom: 3px solid #ff002c;
+}
+
+.subject.red li::before {
+    background-color: #ff002c;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #ff002c 0%, #b40410 100%);
+}
+
+.subject.purple .underline {
+    border-bottom: 3px solid #7f00ff;
+}
+
+.subject.purple li::before {
+    background-color: #7f00ff;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #7f00ff 0%, #d700ff 100%);
+}
+
+
+@media screen and (max-width: 767px) {
+    .subject {
+        width: 100%;
+        padding: 32px 44px 38px;
+    }
+
+    .subjects .subjects-heading {
+        font-size: 1.25em;
+        padding: 10px;
+    }
+}
