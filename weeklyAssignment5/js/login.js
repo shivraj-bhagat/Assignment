@@ -16,7 +16,14 @@ function getCookie(cookieName) {
 function checkCookie() {
     let token = getCookie("token");
     if (token != "") {
-        window.location.replace("dashboard.html");
+        window.location.replace("app.html");
+    }
+}
+
+function checkCookieApp() {
+    let token = getCookie("token");
+    if (token == "") {
+        window.location.replace("login.html");
     }
 }
 

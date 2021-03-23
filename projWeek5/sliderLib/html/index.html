@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SliderLibrary | Js</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/simpleSlider.css">
+    <link rel="stylesheet" href="../css/dotSlider.css">
+    <link rel="stylesheet" href="../css/navigationSlide.css">
+    <link rel="stylesheet" href="../css/multiple.css">
+  </head>
+  <body>
+    <h1>Slider Library built in Js and css file</h1>
+    <p style="width:80vw; margin: 10px auto;">Add this js file to use the slider library or carousel</p>
+    <div class="codeSection" style="height: 14vh;margin: 10px auto;">
+      <textarea disabled style="width: 100%;height: 100%;">
+        <link rel="stylesheet" href="../css/slider.css">
+        <script src="../js/slider.js"></script>
+      </textarea>
+    </div>
+    <p style="width:80vw; margin: 10px auto;">
+      Add this html to use the slider library or carousel<br>
+      Now, to make it slide add showSlider() in script section to make it work
+    </p>
+    <div class="codeSection" style="height: 28vh;margin: 10px auto;">
+      <textarea disabled style="width: 100%;height: 100%;">
+        <div class="slide-container">
+          <div class="slide fade">
+          <img src='..' alt=''>
+        </div>
+        .
+        .
+        .
+      </div>
+      </textarea>
+    </div>
+    <div class="slide-wrapper">
+      <div class="slide-container" style="width: 50%;">
+        <div class="slide1 fade">
+          <img src='../img/1.jpg' alt=''>
+        </div>
+        <div class="slide1 fade">
+          <img src='../img/2.jpg' alt=''>
+        </div>
+        <div class="slide1 fade">
+          <img src='../img/3.jpg' alt=''>
+        </div>
+        <div class="slide1 fade">
+          <img src='../img/4.jpg' alt=''>
+        </div>
+      </div>
+    </div>
+    <p style="width:80vw; margin: 10px auto;">
+      To show dot below the slider add this html text after the slide-container <br>
+      Now, to make it slide add showDots(true) in script section to make it work<br>
+      i.e true here means slide will slides after 5 secs and no value means the slider will<br>
+      not slide and you have to click on the next dot to make it work.
+    </p>
+    <div class="codeSection" style="height: 22vh;margin: 10px auto;">
+      <textarea disabled style="width: 100%;height: 100%;">
+        <div class="dots-container">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </textarea>
+    </div>
+    <div class="slide-wrapper">
+      <div class="slide-container" style="width: 50%;">
+        <div class="slide2 fade">
+          <img src='../img/1.jpg' alt=''>
+        </div>
+        <div class="slide2 fade">
+          <img src='../img/2.jpg' alt=''>
+        </div>
+        <div class="slide2 fade">
+          <img src='../img/3.jpg' alt=''>
+        </div>
+        <div class="slide2 fade">
+          <img src='../img/4.jpg' alt=''>
+        </div>
+      </div>
+      <div class="dots-container">
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+      </div>
+    </div>
+    <p style="width:80vw; margin: 10px auto;">
+      To show next and previous button in the slider add this html text inside the slide-container <br>
+      Now, to make it slide add showNavigation(true) in script section to make it work<br>
+      i.e true here means slide will slides after 5 secs and no value means the slider will<br>
+      not slide and you have to click on the next and previous buttton to make it work.
+    </p>
+    <div class="codeSection" style="height: 13vh;margin: 10px auto;">
+      <textarea disabled style="width: 100%;height: 100%;">
+        <a href="javascript:void(0)" class="prev" title="Previous">&#10094</a>
+        <a href="javascript:void(0)" class="next" title="Next">&#10095</a>
+      </textarea>
+    </div>
+
+    <div class="slide-wrapper">
+      <div class="slide-container" style="width: 50%;">
+        <div class="slide3 fade">
+          <img src='../img/1.jpg' alt=''>
+        </div>
+        <div class="slide3 fade">
+          <img src='../img/2.jpg' alt=''>
+        </div>
+        <div class="slide3 fade">
+          <img src='../img/3.jpg' alt=''>
+        </div>
+        <div class="slide3 fade">
+          <img src='../img/4.jpg' alt=''>
+        </div>
+
+        <a href="javascript:void(0)" class="slide3Prev" title="Previous">&#10094</a>
+        <a href="javascript:void(0)" class="slide3Next" title="Next">&#10095</a>
+      </div>
+    </div>
+
+    <p style="width:80vw; margin: 20px auto;">
+      To show next and previous button and dot in the slider add this function text inside the slide-container <br>
+      Now, to make it slide add <b>showDotsNavigation(true)</b> in script section to make it work<br>
+      i.e true here means slide will slides after 5 secs and no value means the slider will<br>
+      not slide and you have to click on the next and previous or dots buttton to make it work.
+    </p>
+
+    <div class="slide-wrapper">
+      <div class="slide-container" style="width: 50%;">
+        <div class="slide fade">
+          <img src='../img/1.jpg' alt=''>
+        </div>
+        <div class="slide fade">
+          <img src='../img/2.jpg' alt=''>
+        </div>
+        <div class="slide fade">
+          <img src='../img/3.jpg' alt=''>
+        </div>
+        <div class="slide fade">
+          <img src='../img/4.jpg' alt=''>
+        </div>
+
+        <a href="javascript:void(0)" class="prev" title="Previous">&#10094</a>
+        <a href="javascript:void(0)" class="next" title="Next">&#10095</a>
+      </div>
+      <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <p style="width:80vw; margin: 10px auto;">
+      To add multiple images in one section in the slider add this html text inside the slide-container <br>
+      Now, add some images in this section like given below<br>
+      inside <b>class="slide"</b> add images
+    </p>
+    <div class="codeSection" style="height: 38vh;margin: 10px auto;">
+      <textarea disabled style="width: 100%;height: 100%;">
+        <div class="slide fade">
+          <div class="slide-card"><img src="https://picsum.photos/200?random=1"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=2"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=3"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=4"></div>
+        </div>
+        <div class="slide fade">
+          .
+          .
+          .
+          .
+        </div>
+      </textarea>
+    </div>
+
+    <div class="slide-wrapper" style="margin: 30px 0 50px;">
+      <div class="slide-container">
+        <div class="slide-multiple fade">
+          <div class="slide-card"><img src="https://picsum.photos/200?random=1"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=2"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=3"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=4"></div>
+        </div>
+        <div class="slide-multiple fade">
+          <div class="slide-card"><img src="https://picsum.photos/200?random=5"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=6"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=7"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=8"></div>
+        </div>
+        <div class="slide-multiple fade">
+          <div class="slide-card"><img src="https://picsum.photos/200?random=9"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=10"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=11"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=12"></div>
+        </div>
+        <div class="slide-multiple fade">
+          <div class="slide-card"><img src="https://picsum.photos/200?random=13"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=14"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=15"></div>
+          <div class="slide-card"><img src="https://picsum.photos/200?random=16"></div>
+        </div>
+
+        <a href="javascript:void(0)" class="multiple-prev" title="Previous">&#10094</a>
+        <a href="javascript:void(0)" class="multiple-next" title="Next">&#10095</a>
+      </div>
+      <div class="dots-container">
+        <span class="multiple-dot"></span>
+        <span class="multiple-dot"></span>
+        <span class="multiple-dot"></span>
+        <span class="multiple-dot"></span>
+      </div>
+    </div>
+    <footer style="text-align: center;">
+      <h3>&copy;&nbsp;Crownstack @ Shiv Raj Bhagat</h3>
+    </footer>
+
+    <script src="../js/sliderCustom.js"></script>
+    <script>
+      showSlider()
+      showDots(true)
+      showNavigation(true)
+      showDotsNavigation(true);
+      showMultiple(true);
+    </script>
+  </body>
+</html>

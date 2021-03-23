@@ -1,0 +1,21 @@
+.slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.slide-container .slide1 {
+    display: none;
+    width: 100%;
+}
+
+.slide-container .slide1.fade {
+    animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.slide-container .slide1 img {
+    width: 100%;
+}
