@@ -50,7 +50,7 @@ async function onLogin() {
             console.log(e.message);
         }
     } else if(!flag && phone.value == undefined){
-        msg.innerHTML = "Please enter your number<br>Phone number must include country code. <br>Eg: for india, eg: 91xxxxxxxxxx";
+        msg.innerHTML = "Please enter your 12 digit phone number<br>Phone number must include country code. <br>Eg: for india, eg: 91xxxxxxxxxx";
     }
     return false;
 }
@@ -59,5 +59,5 @@ function setCookie(data) {
     let d = new Date();
     d.setTime(d.getTime() + data.expires_in);
     document.cookie = "token=" + data.token + ";" + "expires=" + d.toGMTString();
-    window.location.replace("dashboard.html");
+    window.location.replace("app.html");
 }
