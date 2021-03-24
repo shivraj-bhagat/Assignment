@@ -172,3 +172,9 @@ function showMultiple(autoplaySlide = false) {
         }, 5000);
     }
 }
+
+showSlider()
+showDots(true)
+showNavigation(true)
+showDotsNavigation(true);
+showMultiple(true);
