@@ -1,0 +1,24 @@
+.progress-bar-2 {
+    background-color: #efefef;
+    margin: 15px auto;
+    height: 5px;
+    width: 90%;
+}
+
+.progress-bar-inner-2 {
+    background: rgb(72, 126, 176);
+	height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.progress-bar-head-2, .progress-bar-text-2 {
+    text-align: center;
+    color: rgb(72, 126, 176);
+}
+
+.progress-bar-text-2 {
+    transition: all 0.3s ease;
+    display: none;
+}
