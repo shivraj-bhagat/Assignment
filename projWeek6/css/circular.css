@@ -1,0 +1,12 @@
+body {
+    background-color: #696878;
+    margin: 0;
+}
+
+#counter{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}

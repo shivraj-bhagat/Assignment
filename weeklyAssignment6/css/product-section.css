@@ -1,0 +1,113 @@
+.products-section {
+    padding: 40px 0;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+}
+
+.product {
+    border: 2px solid #000;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.product-container {
+    padding: 10px 20px;
+}
+
+.product .product-img {
+    width: 150px;
+    height: 200px;
+    margin: 3px auto;
+}
+
+.product .product-img img {
+    min-width: 50px;
+    max-width: 150px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.product .product-content .product-name p {
+    text-transform: capitalize;
+}
+
+.product-content {
+    height: 150px;
+}
+
+.product-content .product-name {
+    height: 40px;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.product-content .product-quantity {
+    padding: 10px 0;
+}
+
+.product-quantity {
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 15px auto 0;
+}
+
+.product-quantity p {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.product-quantity .quantity-minus,
+.product-quantity .quantity-no,
+.product-quantity .quantity-plus {
+    font-weight: 500;
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+}
+
+.product-quantity .quantity-minus {
+    border: 2px solid #666;
+    border-right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.product-quantity .quantity-no {
+    border: 2px solid #666;   
+}
+
+.product-quantity .quantity-plus {
+    border: 2px solid #666;
+    border-left: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.product-quantity .quantity-minus:hover,
+.product-quantity .quantity-plus:hover {
+    background-color: #7f8fa6;
+}
+
+@media screen and (min-width: 575px){
+    .products-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 767px){
+    .products-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (min-width: 991px){
+    .products-container {
+        grid-template-columns: 23% 23% 23% 23%;
+    }
+}
