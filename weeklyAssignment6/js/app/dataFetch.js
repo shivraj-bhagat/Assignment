@@ -24,17 +24,11 @@ async function getWholesaler() {
     let token = getCookie("token");
     if(token != "") {
         try{
-            let response = await fetch("https://netco-indo-test.nfrnds.net:20003/fmcg-dd/whs/v2", { 
-                method: "GET",
-                headers: {
-                    "Content-type": "application/json",
-                    "Netco-JWT" : token
-                }
-            });
-            response = await response.json();
-            let whs = response.organizations;
-            // console.log(whs)
+            await getWhsLocal();
+            await getOutletsLocal();
+            let whs = whsLocal;
             let firstWhsId = whs[0].orgId;
+            
             getOutlets(firstWhsId);
             getCategoryandProduct(firstWhsId);
             let whsOption = document.getElementById("whs");
@@ -55,23 +49,10 @@ async function getOutlets(whsId) {
     let token = getCookie("token");
     if(token != "") {
         try{
-            let response = await fetch("https://netco-indo-test.nfrnds.net:20003/fmcg-dd/outlets/v2", { 
-                method: "GET",
-                headers: {
-                    "Content-type": "application/json",
-                    "Netco-JWT" : token
-                }
-            });
-            response = await response.json();
-            // console.log(response)
-            let outlets = response.organizations;
+            let outlets = outletLocal;
             let outletOption = document.getElementById("outl");
-            // console.log(outlets)
-            // console.log(whsId)
             outlets.forEach(outlet => {
                 if(whsId == outlet.whs[0].whsOrgId) {
-                    // console.log(outlet.whs[0].whsOrgId)
-                    // console.log(outlet.isVerified, outlet.whs[0].whsOrgId)
                     let option = document.createElement("option");
                     option.value = outlet.orgId;
                     option.text = outlet.orgName;
@@ -89,20 +70,11 @@ async function getCategoryandProduct(whsId) {
     let token = getCookie("token");
     if(token != "") {
         try{
-            let response = await fetch(`https://netco-indo-test.nfrnds.net:20003/fmcg-dd/catalog?whsId=${whsId}`, { 
-                method: "GET",
-                headers: {
-                    "Content-type": "application/json",
-                    "Netco-JWT" : token
-                }
-            });
-            response = await response.json();
-            let categories = response.categories;
-            let products = response.products;
-            categories.sort((a,b)=>{
-                return b.productCategoryId-a.productCategoryId
-            })
-            // console.log(categories);
+            await getCategoryandProductLocal(whsId);
+
+            let categories = categoryLocal;
+            let products = productLocal;
+            
             let catList = document.getElementById("category");
             catList.innerHTML = "";
 

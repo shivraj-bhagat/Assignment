@@ -51,15 +51,7 @@ async function getCatName(id) {
     let token = getCookie("token");
     if(token != "") {
         try{
-            let response = await fetch(`https://netco-indo-test.nfrnds.net:20003/fmcg-dd/catalog?whsId=${whsId}`, { 
-                method: "GET",
-                headers: {
-                    "Content-type": "application/json",
-                    "Netco-JWT" : token
-                }
-            });
-            response = await response.json();
-            let categories = response.categories;
+            let categories = categoryLocal;
             // console.log(categories);
             for(index in categories) {
                 if(categories[index].productCategoryId == id)

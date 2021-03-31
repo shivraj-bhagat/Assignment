@@ -4,17 +4,8 @@ async function onCategoryChange(id) {
     let whsId = elem.options[elem.selectedIndex].value;
     let token = getCookie("token");
     if(token != "") {
-        try{
-            let response = await fetch(`https://netco-indo-test.nfrnds.net:20003/fmcg-dd/catalog?whsId=${whsId}`, { 
-                method: "GET",
-                headers: {
-                    "Content-type": "application/json",
-                    "Netco-JWT" : token
-                }
-            });
-            response = await response.json();
-            let products = response.products;
-
+        try{   
+            let products = productLocal;
             let prodList = document.getElementById("products");
             prodList.innerHTML = "";
             for(item in Object.entries(products)){
