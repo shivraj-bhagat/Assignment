@@ -3,9 +3,11 @@
 }
 
 .products-container {
+    width: 80%;
     display: grid;
     grid-template-columns: auto;
     justify-content: space-evenly;
+    margin: 0 auto;
 }
 
 .product {
@@ -21,13 +23,15 @@
 .product .product-img {
     width: 150px;
     height: 200px;
-    margin: 3px auto;
+    margin: 0 auto;
 }
 
 .product .product-img img {
     min-width: 50px;
     max-width: 150px;
     height: 100%;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -102,12 +106,14 @@
 
 @media screen and (min-width: 767px){
     .products-container {
+        width: 90%;
         grid-template-columns: auto auto auto;
     }
 }
 
 @media screen and (min-width: 991px){
     .products-container {
+        width: 95%;
         grid-template-columns: 23% 23% 23% 23%;
     }
 }
