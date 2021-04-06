@@ -1,0 +1,28 @@
+.header-section .header-section-img {
+    padding: 20px 0;
+    background-color: #efefed;
+}
+
+.header-section .header-section-img img {
+    display: block;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.header-section .header-section-heading h1 {
+    color: #102749;
+    padding: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media screen and (min-width: 575px) {
+    .header-section .header-section-img {
+        padding: 20px 40px;
+    }
+
+    .header-section .header-section-img img {
+        margin: 0;
+    }
+}

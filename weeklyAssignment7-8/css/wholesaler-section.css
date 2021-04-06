@@ -1,0 +1,98 @@
+.wholesaler-outlet-section {
+    padding: 20px 0;
+    border-bottom: 2px solid #636e72;
+}
+
+.wholesaler-section-right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.wholesaler p , .outlets p, .select-wrap {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+.wholesaler, .outlets {
+    margin: 10px auto;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0.25em 0.5em;
+    margin: 0;
+    width: 100%;
+    min-width: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    cursor: inherit;
+    line-height: inherit;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select-section {
+    width: 12em;
+    border: 2px solid #000;
+    border-radius: 0.25em;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    display: grid;
+    grid-template-areas: "select";
+}
+
+.select-section::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: #000;
+    margin-top: 10px;
+    margin-right: 10px;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+select, .select-section::after {
+    grid-area: select;
+}
+
+.select-section {
+    justify-self: center;
+}
+
+.select-section::after {
+    justify-self: end;
+}
+
+@media screen and (min-width: 565px) {
+    .wholesaler-section-right {
+        grid-template-columns: auto auto;
+    }
+
+    .wholesaler, .outlets {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .wholesaler-section-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .wholesaler {
+        margin: 0;
+    }
+
+    .outlets {
+        margin: 0 60px 0 0;
+    }
+}

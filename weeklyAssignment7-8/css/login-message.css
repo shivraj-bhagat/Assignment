@@ -1,0 +1,44 @@
+.login-message {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    margin: 10px auto;
+    background-color: #2ecc71;
+    min-height: 30px;
+    max-height: 60px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.login-message p {
+    text-align: center;
+    padding: 3px;
+    color: #102749;
+}
+
+.msg-toggle-icon {
+    position: relative;
+    float: right;
+    top: -26px;
+    right: 10px;
+    text-decoration: none;
+}
+
+.msg-toggle-icon img {
+    height: 10px;
+    width: 10px;
+    filter: invert(11%) sepia(44%) saturate(2443%) hue-rotate(197deg) brightness(91%) contrast(93%);
+}
+
+@media screen and (min-width: 565px) {
+    .login-message {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .login-message {
+        width: 50%;
+        top: 0;
+    }
+}

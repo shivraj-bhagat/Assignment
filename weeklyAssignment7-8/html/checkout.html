@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | WA8 | crownstack</title>
+        <link rel="icon" href="#" type="image/gif">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Titillium+Web:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../css/checkout/head-section.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../css/checkout/cart-section.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../css/checkout/cart-items.css" type="text/css" media="screen">
+        <script src="../js/login.js"></script>
+        <script>
+            // checkCookieApp();
+            checkCookieCheckout()
+        </script>
+    </head>
+    <body>
+        <div class="header-section">
+            <div class="header-section-img">
+                <a href="./app.html"><img src="../img/logo_fixed.png" alt="header image"></a>
+            </div>
+            <div class="header-section-heading">
+                <h1>Checkout</h1>
+            </div>
+        </div>
+
+        <div class="cart-details-section">
+            <div class="user-details-section">
+                <div class="user-details-form">
+                    <form class="form-section" onsubmit="return false">
+                        <input class="form-input" type="text" id="name" name="name" placeholder="Name"/>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="Email"/>
+                        <input class="form-input" type="text" id="phone" name="phone" placeholder="Phone"/>
+                        <input class="customBtn" type="button" onclick="onGetLocation()" value="Get Current Location">
+                    </form>
+                    
+                    <p style="font-size: 20px; text-align: center; display: none;" id="formMsg"></p>
+                </div>
+
+                <div class="place-order-button">
+                    <button type="button" onclick="onSubmitForm()">Place Order</button>
+                </div>
+            </div>
+
+            <div class="cart-items-section" id="cartBucket">
+                <h3>Cart Items</h3>
+            </div>
+        </div>
+
+        <script src="../js/checkout/formDataHandler.js"></script>
+        <script src="../js/checkout/itemAddUpdate.js"></script>
+    </body>
+</html>
