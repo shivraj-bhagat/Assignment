@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | WA8 | crownstack</title>
+        <link rel="icon" href="#" type="image/gif">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Titillium+Web:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../css/index.css" type="text/css" media="screen">
+        <script src="../js/login.js"></script>
+        <script>
+            checkCookie();
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-wrapper">
+                <a href="./index.html">
+                    <img class="logo" src="../img/logo.png" id="headerLogo" >
+                </a>
+                <div class="toggle-section">
+                    <a class="bar toggle-icon" id="barIcon" href="javascript:void(0);" onclick="toggleClick(this)">
+                        <img src="../img/list.svg">
+                    </a>
+                    <a class="close toggle-icon" id="closeIcon" href="javascript:void(0);" onclick="toggleClick(this)">
+                        <img src="../img/close.svg">
+                    </a>
+                </div>
+
+                <div class="left-content" id="leftContent">
+                    <ul class="left-content-wrapper">
+                        <li class="dropdown">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">About</a>
+                            </div>
+                            <ul class="dropdown-content">
+                                <li><a href="javascript:void(0);">Company Overview</a></li>
+                                <li><a href="javascript:void(0);">What we do</a></li>
+                                <li><a href="javascript:void(0);">Our Leadership</a></li>
+                                <li><a href="javascript:void(0);">Sustainable impact</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">Solutions</a>
+                            </div>
+                            <ul class="dropdown-content">
+                                <li><a href="javascript:void(0);">Agriculture</a></li>
+                                <li><a href="javascript:void(0);">Health</a></li>
+                                <li><a href="javascript:void(0);">FMCG</a></li>
+                                <li><a href="javascript:void(0);">Government</a></li>
+                                <li><a href="javascript:void(0);">MSME</a></li>
+                                <li><a href="javascript:void(0);">Retail</a></li>
+                                <li><a href="javascript:void(0);">Banking</a></li>
+                            </ul>
+                        </li>
+                        <li class="links">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">Press</a>
+                            </div>
+                        </li>
+                        <li class="links">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">Contact</a>
+                            </div>
+                        </li>
+                        <li class="links">
+                            <div class="dropdown-heading">
+                                <a href="./login.html">Login</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="intro">
+                <div class="wrapper">
+                    <h1>Extend your Reach.</h1>
+                    <h2>
+                        We unlock the last mile supply chain opportunities<br/>
+                        for enterprises of all sizes in emerging markets.
+                    </h2>
+                </div>
+            </div>
+            <div class="who-section">
+                <div class="who-wrapper">
+                    <h1>Who we are</h1>
+                    <h2>
+                        The N-Frnds unique “Last Mile” hybrid, multi-product distribution network for emerging markets, 
+                        connects consumer goods brands, insurers and financial institutions with small retailers and 
+                        consumers unlocking growth.
+                    </h2>
+                    <p>
+                        Our Hybrid platform combines technology with our network of sales agents who “plug-in” to the 
+                        current traditional distribution network. We have achieved global scale with over 20M users on 
+                        the platform (mobile, web, USSD), a proven business model, 21 patents, successful live networks 
+                        in South East Asia and Africa.
+                    </p>
+                    <br>
+                    <p>
+                        See how our work is impacting small businesses in emerging markets:
+                    </p>
+                    <br>
+                    <p>
+                        <div class="video-section">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MpmuuEiD9Rg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </p>
+                    
+                    <button class="readmore">READ MORE</button>
+                    <div class="numbers">
+                        <div class="number">
+                            <span>15</span>
+                            <h4>million users</h4>
+                        </div>
+                        <div class="number">
+                            <span>12</span>
+                            <h4>industry partners</h4>
+                        </div>
+                        <div class="number">
+                            <span>3</span>
+                            <h4>continents</h4>
+                        </div>
+                    </div>
+                </div>
+                <img class="who-section-bg" src="../img/who-star.png">
+            </div>
+        </div>
+
+        <div class="solution-section" id="solution">
+            <div class="solution-heading">
+                <h1>Our Solutions</h1>
+                <p>
+                    N-Frnds provides comprehensive solutions designed to meet the specific requirements of 
+                    our partners and customers throughout the consumer economy in emerging markets.
+                </p>
+            </div>
+            <div class="box-wrapper">
+                <ul class="list-box" id="list">
+                    <li id="list1" data-color="#ffaf00" clicked="yes" onclick="changeBox(this)" onmouseenter="changeToColor(this)" onmouseleave="changeToWhite(this)">Banking</li>
+                    <li id="list2" data-color="#9ec000" clicked="no" onclick="changeBox(this)" onmouseenter="changeToColor(this)" onmouseleave="changeToWhite(this)">Agriculture</li>
+                    <li id="list3" data-color="#21b334" clicked="no" onclick="changeBox(this)" onmouseenter="changeToColor(this)" onmouseleave="changeToWhite(this)">Health</li>
+                    <li id="list4" data-color="#00b0bd" clicked="no" onclick="changeBox(this)" onmouseenter="changeToColor(this)" onmouseleave="changeToWhite(this)">FMCG</li>
+                    <li id="list5" data-color="#10a1df" clicked="no" onclick="changeBox(this)" onmouseenter="changeToColor(this)" onmouseleave="changeToWhite(this)">Government</li>
+                    <li id="list6" data-color="#0767b2" clicked="no" onclick="changeBox(this)" onmouseenter="changeToColor(this)" onmouseleave="changeToWhite(this)">MSME</li>
+                    <li id="list7" data-color="#0f4ef7" clicked="no" onclick="changeBox(this)" onmouseenter="changeToColor(this)" onmouseleave="changeToWhite(this)">Retail</li>
+                </ul>
+                <div class="box-details">
+                    <img src="../img/box-icon/bank.png" alt="logo" id="boxLogo">
+                    <h3 id="heading">
+                        Mobile and Branchless banking solutions for 
+                        driving financial Inclusion.
+                    </h3>
+                    <p id="paragraph">
+                        Providing end-to-end mobile financial services 
+                        and engangement capabilities through our strategic
+                        SaaS solutions.
+                    </p>
+                    <a href="#">
+                        <button id="listBtn" class="box-button">Learn More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="solution-footer">
+                <p>
+                    Check out illustrations of how our solutions are digitizing business and financial ecosystems in banking, FMCG and agricultural value-chains.
+                </p>
+                <div class="buttons">
+                    <a href="#"><button class="solution-button banking">Banking</button></a>
+                    <a href="#"><button class="solution-button fmcg">FMCG</button></a>
+                    <a href="#"><button class="solution-button agriculture">Agriculture</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners">
+            <h1>Our partners</h1>
+            <div class="img-wrapper">
+                <img src="../img/partners/coke.png" alt="coke logo">
+                <img src="../img/partners/axa.png" alt="axa logo">
+                <img src="../img/partners/unilever.jpg" alt="unilever logo">
+                <img src="../img/partners/pg.jpg" alt="pg logo">
+                <img src="../img/partners/gov.jpg" alt="gov logo">
+            </div>
+        </div>
+
+        <div class="slider-section">
+            <div class="slider-container">
+                <div class="slider-heading">
+                    <h1>Customer stories</h1>
+                </div>
+                <div class="slider-wrapper fade">
+                    <img src="../img/slider/agri.jpg" alt="Agriculture images">
+                    <div class="text-wrap">
+                        <h2>Digitized Agriculture</h2>
+                        <p>
+                            N-Frnds has partnered with the Rwandan Ministry of Agriculture and Animal Resources to digitize services and 
+                            processes, making the opportunities of SaaS accessible to more than 80% of the country’s population.
+                        </p>
+                        <a href="#"><button class="slider-readmore">READ MORE</button></a>
+                    </div>
+                </div>
+                <div class="slider-wrapper fade">
+                    <img src="../img/slider/bank.jpg" alt="Banking images">
+                    <div class="text-wrap">
+                        <h2>Branchless Banking</h2>
+                        <p>
+                            N-Frnds has partnered with Indonesian Bank, BTPN Wow, to provide one of the world’s largest branchless 
+                            banking solutions in the world, bringing over 3.5 million mass market users into the financial system.
+                        </p>
+                        <a href="#"><button class="slider-readmore">READ MORE</button></a>
+                    </div>
+                </div>
+                <div class="slider-wrapper fade">
+                    <img src="../img/slider/gov.jpg" alt="Government images">
+                    <div class="text-wrap">
+                        <h2>Accessible Government</h2>
+                        <p>
+                            N-Frnds has partnered with RwandaOnline to make over 100 government services accessible to Rwanda’s 
+                            12 million citizens and small businesses.
+                        </p>
+                        <a href="#"><button class="slider-readmore">READ MORE</button></a>
+                    </div>
+                </div>
+
+                <div class="dot-section">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+            </div>
+        </div>
+
+        <div class="press-section">
+            <h1>Press</h1>
+            <div class="press-wrapper">
+                <div class="article">
+                    <h2>
+                        Mastercard and Asian Development Bank build multi-stakeholder 
+                        alliance to digitalize supply chains for wholesalers and retailers
+                    </h2>
+                    <h3>
+                        Mastercard
+                    </h3>
+                    <a href="#">read on Mastercard</a>
+                </div>
+                <div class="article">
+                    <h2>
+                        N-Frnds and AXA are working together in Indonesia to provide 
+                        micro-health insurance to the last mile through the N-Frnds network.
+                    </h2>
+                    <h3>
+                        Youtube
+                    </h3>
+                    <a href="#">read on Youtube</a>
+                </div>
+                <div class="article">
+                    <h2>
+                        Mastercard, ADB and partners take on Asian retail supply 
+                        chain inefficiencies with new digital solution
+                    </h2>
+                    <h3>
+                        Global Trade Review
+                    </h3>
+                    <a href="#">read on Global Trade Review</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="line"></div>
+            <div class="press-last-a">
+                <a href="#" >read all press</a>
+            </div>
+        </div>
+
+        <!--footer starts-->
+        <div class="footer">
+            <img class="footer-star" src="../img/footer_stars.svg" alt="footer star img">
+            <img class="footer-logo" src="../img/footer_logo.svg" alt="footer logo">
+            <div class="get-in-touch">
+                <h5>
+                    Be in touch
+                    <span>info@frnds.com</span>
+                </h5>
+                <div class="social">
+                    <a href="#" class="icon"><img src="../img/social/facebook.svg" alt="facebook icon" class="svg-footer"></a>
+                    <a href="#" class="icon"><img src="../img/social/twitter.svg" alt="twitter icon" class="svg-footer"></a>
+                    <a href="#" class="icon"><img src="../img/social/youtube.svg" alt="youtube icon" class="svg-footer"></a>
+                    <a href="#" class="icon"><img src="../img/social/medium.svg" alt="medium icon" class="svg-footer"></a>
+                    <!-- <p><div>Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></p> -->
+                </div>
+            </div>
+            <p class="credits">
+                Designed for
+                <span>Crownstack Assignment by Shiv Raj Bhagat</span>
+            </p>
+        </div> 
+        <!--footer ends-->
+        <script src="../js/nav.js"></script>
+        <script src="../js/index.js"></script>
+        <script src="../js/nav-toggle.js"></script>
+    </body>
+</html>

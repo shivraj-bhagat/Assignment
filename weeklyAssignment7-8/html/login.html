@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | WA8 | crownstack</title>
+        <link rel="icon" href="#" type="image/gif">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Titillium+Web:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../css/login.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../css/fixed-header.css" type="text/css" media="screen">
+        <script src="../js/login.js"></script>
+        <script>
+            checkCookie();
+        </script>
+    </head>
+    <body>
+        <div class="header login">
+            <div class="header-wrapper">
+                <a href="./index.html">
+                    <img class="logo" src="../img/logo.png" id="headerLogo" >
+                </a>
+                <div class="toggle-section">
+                    <a class="bar toggle-icon" id="barIcon" href="javascript:void(0);" onclick="toggleClick(this)">
+                        <img src="../img/list.svg">
+                    </a>
+                    <a class="close toggle-icon" id="closeIcon" href="javascript:void(0);" onclick="toggleClick(this)">
+                        <img src="../img/close.svg">
+                    </a>
+                </div>
+
+                <div class="left-content" id="leftContent">
+                    <ul class="left-content-wrapper">
+                        <li class="dropdown">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">About</a>
+                            </div>
+                            <ul class="dropdown-content">
+                                <li><a href="javascript:void(0);">Company Overview</a></li>
+                                <li><a href="javascript:void(0);">What we do</a></li>
+                                <li><a href="javascript:void(0);">Our Leadership</a></li>
+                                <li><a href="javascript:void(0);">Sustainable impact</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">Solutions</a>
+                            </div>
+                            <ul class="dropdown-content">
+                                <li><a href="javascript:void(0);">Agriculture</a></li>
+                                <li><a href="javascript:void(0);">Health</a></li>
+                                <li><a href="javascript:void(0);">FMCG</a></li>
+                                <li><a href="javascript:void(0);">Government</a></li>
+                                <li><a href="javascript:void(0);">MSME</a></li>
+                                <li><a href="javascript:void(0);">Retail</a></li>
+                                <li><a href="javascript:void(0);">Banking</a></li>
+                            </ul>
+                        </li>
+                        <li class="links">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">Press</a>
+                            </div>
+                        </li>
+                        <li class="links">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">Contact</a>
+                            </div>
+                        </li>
+                        <li class="links">
+                            <div class="dropdown-heading">
+                                <a href="javascript:void(0);">Login</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-wrapper">
+            <div class="login-section">
+                <form class="form-section" onsubmit="return false">
+                    <h1>Login</h1>
+                    <!-- <p>919530697527</p> -->
+                    <label for="phone">Phone:</label><br>
+                    <input class="form-input" type="text" id="phone" name="phone" placeholder="Please enter number with country code"/><br>
+                    <p id="msg"></p>
+                    <input type="button" class="custom-btn" value="Login" onclick="onLogin()">
+                </form>
+            </div>
+        </div>
+        <!--footer starts-->
+        <div class="footer">
+            <img class="footer-star" src="../img/footer_stars.svg" alt="footer star img">
+            <img class="footer-logo" src="../img/footer_logo.svg" alt="footer logo">
+            <div class="get-in-touch">
+                <h5>
+                    Be in touch
+                    <span>info@frnds.com</span>
+                </h5>
+                <div class="social">
+                    <a href="#" class="icon"><img src="../img/social/facebook.svg" alt="facebook icon" class="svg-footer"></a>
+                    <a href="#" class="icon"><img src="../img/social/twitter.svg" alt="twitter icon" class="svg-footer"></a>
+                    <a href="#" class="icon"><img src="../img/social/youtube.svg" alt="youtube icon" class="svg-footer"></a>
+                    <a href="#" class="icon"><img src="../img/social/medium.svg" alt="medium icon" class="svg-footer"></a>
+                    <!-- <p><div>Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></p> -->
+                </div>
+            </div>
+            <p class="credits">
+                Designed for
+                <span>Crownstack Assignment by Shiv Raj Bhagat</span>
+            </p>
+        </div> 
+        <!--footer ends-->
+        <script>
+            const navbar = document.querySelector('.header');
+            window.onscroll = () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('nav-active');
+                    // navbar.classList.remove('login');
+                    document.getElementById("headerLogo").setAttribute("src","../img/logo_fixed.png");
+                } else {
+                    navbar.classList.remove('nav-active');
+                    // navbar.classList.add('login');
+                    document.getElementById("headerLogo").setAttribute("src","../img/logo.png");
+                }
+            };
+        </script>
+        <script src="../js/nav-toggle.js"></script>
+        <script src="../js/loginFormHandler.js"></script>
+    </body>
+</html>

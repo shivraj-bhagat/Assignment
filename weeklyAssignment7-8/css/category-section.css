@@ -1,0 +1,41 @@
+.categories-container {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    border-bottom: 2px solid #aaaaaa;
+}
+
+.categories-container::-webkit-scrollbar {
+    display: none;
+}
+
+.categories-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 10px;
+    width: max-content;
+}
+
+.categories-section .category {
+    min-width: 100px;
+    padding: 0 10px;
+}
+
+.categories-section .category a {
+    text-decoration: none;
+    color: #000;
+    font-style: inherit;
+    text-align: center;
+}
+
+.categories-section .category img, 
+.categories-section .category span {
+    display: block;
+}
+
+.categories-section .category img {
+    height: 50px;
+    width: 40px;
+    margin: 0 auto;
+}
