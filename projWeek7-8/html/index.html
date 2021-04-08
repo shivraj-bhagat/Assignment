@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date and Time Picker</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="https://kit.fontawesome.com/c0c6dc1c3e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <h1 style="text-align: center; padding-top: 80px;">Time and Date Picker</h1>
+  
+  <h2 id="message"></h2>
+
+  <div class="input-container">
+    <input type="text" id="inputDate" placeholder="DD/MM/YYYY HH:MM" autocomplete="off">
+    <i class="icon fas fa-calendar-day" id="icon-cal"></i>
+  </div>
+
+  <div class="main-container" id="calender">
+    <div class="main-block-date">
+      <div class="table-head">
+        <div class="table-head-left">
+          <a href="javascript:void(0)" onclick="clickArrow(-1)"><i class="fas fa-chevron-left"></i></a>
+        </div>
+        <div class="table-head-center">
+          <select name="months" class="months" id="months">
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+            <option value="3">Mar</option>
+            <option value="4">Apr</option>
+            <option value="5">May</option>
+            <option value="6">Jun</option>
+            <option value="7">Jul</option>
+            <option value="8">Aug</option>
+            <option value="9">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+          </select>
+
+          <select name="year" class="years" id="years">
+            
+          </select>
+        </div>
+        <div class="table-head-right">
+          <a href="javascript:void(0)" class="table-head-right" onclick="clickArrow(1)"><i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <table class="table" style="text-align: center;" id="day">
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thr</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="main-block-time">
+      <div class="time-top-arrow">
+        <a href="javascript:void(0)" onclick="clickUpDown(-10)"><i class="fas fa-chevron-up"></i></a>
+      </div>
+      <div class="time-section" id="timeSection">
+        <table id="time">
+          
+        </table>
+      </div>
+      <div class="time-down-arrow">
+        <a href="javascript:void(0)" onclick="clickUpDown(10)"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="button" onclick="onSubmit()">Submit</button>
+  </div>
+
+  <script src="../js/index.js"></script>
+  <script src="../js/inputFocus.js"></script>
+  <script src="../js/dateSet.js"></script>
+  <script src="../js/selectEvent.js"></script>
+  <script src="../js/tableEvent.js"></script>
+  <script src="../js/arrowclick.js"></script>
+  <script src="../js/validate.js"></script>
+</body>
+</html>
